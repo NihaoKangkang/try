@@ -13,9 +13,35 @@ git remote add name git_link
 #绑定github仓库
 git pull name master --allow-unrelated-histories
 #将github仓库拉回本地 并消除差异化
-git push --set-upstream try master
+git push --set-upstream name master
 #将本地git仓库推送到github
 #之后用 git push 即可
+
+rm -rf filename
+#删除本地对应文件&文件夹
+git rm filename
+#将删除存放到暂存区
+git commit -m 'commit'
+#删除仓库中的对应文件
+git push
+#删除github仓库对应文件
+
+#########恢复文件
+1.恢复已经commit的文件
+git log
+#查看历史版本
+git revert 版本ID
+#即可恢复
+2.恢复staging文件
+git status
+#查看删除的文件
+git checkout HEAD filename
+#恢复文件
+3.本地删除
+git status
+#查看删除的文件
+git checkout filename
+#恢复文件
 
 git init 
 #在当前文件夹初始化本地仓库
@@ -45,3 +71,5 @@ git commit -m 'commit'
 git clone git__link
 #将别人的仓库克隆到当前文件夹
 
+git stash
+#另说
