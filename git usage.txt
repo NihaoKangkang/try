@@ -71,5 +71,15 @@ git commit -m 'commit'
 git clone git__link
 #将别人的仓库克隆到当前文件夹
 
+#文件上传错误 ! [rejected] master -> master (non-fast forward) 以本地为准
+git pull name master --allow-unrelated-histories
+git add *
+git commit -m 'something'
+git push name master
+
+#删除文件 已经提交github 恢复
+git log
+git revert 版本id
+
 git stash
 #另说
