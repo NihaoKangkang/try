@@ -15,6 +15,7 @@ git pull name master --allow-unrelated-histories
 #将github仓库拉回本地 并消除差异化
 git push --set-upstream try master
 #将本地git仓库推送到github
+#之后用 git push 即可
 
 git init 
 #在当前文件夹初始化本地仓库
