@@ -1,0 +1,46 @@
+#git BASH 可以运行linux命令
+
+git config --global user.name 'username'
+#github名字
+git config --global user.email 'mail@mail'
+#github邮箱
+git config --global user.password password
+#github passwd
+git config --list
+#查看当前git默认参数
+
+git remote add name git_link
+#绑定github仓库
+git pull name master --allow-unrelated-histories
+#将github仓库拉回本地 并消除差异化
+git push
+#将本地git仓库推送到github
+
+git init 
+#在当前文件夹初始化本地仓库
+git status
+#查看当前目录文件状态 本地，暂存，仓库
+touch test.file
+#创建文件
+touch somewhat or mkdir somewhat
+#创建文件夹
+code test.file
+#用vscode打开文件
+git add test.a
+#将test.a文件传到暂存区
+#再使用git status会看到test.a -> new file
+git commit -m 'commit'
+#将暂存区文件存到仓库
+
+#当将文件修改后 再次使用git status命令 会看到修改的文件前有modified标志
+rm -rf test.a
+#删除test.a文件
+git rm test.a
+#将删除文件修改到暂存区
+git commit -m 'commit'
+#仓库对应文件删除
+
+
+git clone git__link
+#将别人的仓库克隆到当前文件夹
+
